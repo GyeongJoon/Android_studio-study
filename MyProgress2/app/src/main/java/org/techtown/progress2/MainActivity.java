@@ -9,7 +9,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    AlertDialog dialog; // AlertDialog로 변경
+    AlertDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
