@@ -18,21 +18,15 @@ public class ViewerFragment extends Fragment {
     // Fragment의 뷰를 생성하고 반환하는 메서드
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // fragment_viewer 레이아웃을 인플레이트하여 rootView로 사용
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) { // fragment_viewer 레이아웃을 인플레이트하여 rootView로 사용
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_viewer, container, false);
-
-        // rootView에서 ImageView를 찾아 멤버 변수에 할당
-        imageView = rootView.findViewById(R.id.imageView);
-
-        // rootView 반환
-        return rootView;
+        imageView = rootView.findViewById(R.id.imageView); // rootView에서 ImageView를 찾아 멤버 변수에 할당
+        return rootView; // rootView 반환
     }
 
-    // 외부에서 호출될 수 있는 setImage 메서드, 선택된 이미지 리소스를 ImageView에 설정
-    public void setImage(int resId) {
-        // imageView의 이미지 리소스를 설정
-        imageView.setImageResource(resId);
+
+    public void setImage(int resId) { // 외부에서 호출될 수 있는 setImage 메서드, 선택된 이미지 리소스를 ImageView에 설정
+        imageView.setImageResource(resId); // imageView의 이미지 리소스를 설정
     }
 }
 
