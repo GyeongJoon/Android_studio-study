@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                // 토스트 메시지를 생성합니다. 내용은 "토스트 메시지입니다.", 지속 시간은 Toast.LENGTH_LONG 입니다.
+                // 토스트 메시지를 생성합니다. 내용은 "토스트 메시지입니다.", 지속 시간은 Toast.LENGTH_LONG 입니다
                 Toast toastView = Toast.makeText(getApplicationContext(), "토스트 메시지입니다.", Toast.LENGTH_LONG);
 
                 // 토스트 메시지의 위치를 지정합니다. (화면 상단 왼쪽, x좌표 200, y좌표 800)
