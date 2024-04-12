@@ -6,15 +6,23 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar; // 이 줄을 추가하세요.
 
 public class MainActivity extends AppCompatActivity { // MainActivity 클래스 선언
+    ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) { // onCreate 메소드 오버라이드
         super.onCreate(savedInstanceState); // 부모 클래스의 onCreate 메소드 호출
         setContentView(R.layout.activity_main); // activity_main 레이아웃 설정
+
+        actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setLogo(R.drawable.home);
+            actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_USE_LOGO);
+        }   
 
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Toolbar toolbar = findViewById(R.id.toolbar); // Toolbar 객체 생성 및 초기화
         setSupportActionBar(toolbar); // 툴바를 액션바로 설정
