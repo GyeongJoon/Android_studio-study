@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity { // MainActivity 클래스 
         if (actionBar != null) {
             actionBar.setLogo(R.drawable.home);
             actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_USE_LOGO);
-        }   
+        }
 
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Toolbar toolbar = findViewById(R.id.toolbar); // Toolbar 객체 생성 및 초기화
         setSupportActionBar(toolbar); // 툴바를 액션바로 설정
