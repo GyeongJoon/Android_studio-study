@@ -13,6 +13,4 @@
         app:title="앱 이름"
         tools:ignore="MissingConstraints" />
 
-    <!-- 여기에 다른 뷰 요소들을 추가합니다 -->
-
 </androidx.constraintlayout.widget.ConstraintLayout>
