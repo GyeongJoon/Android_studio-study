@@ -1,5 +1,3 @@
-package org.techtown.tab2;
-
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -8,11 +6,19 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import org.techtown.tab2.Fragment1;
+import org.techtown.tab2.Fragment2;
+import org.techtown.tab2.Fragment3;
+
 public class MainActivity extends AppCompatActivity {
 
     Fragment1 fragment1;
     Fragment2 fragment2;
     Fragment3 fragment3;
+
+    private static final int TAB_1_ID = R.id.tab1;
+    private static final int TAB_2_ID = R.id.tab2;
+    private static final int TAB_3_ID = R.id.tab3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +36,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
-                    case R.id.tab1:
+                    case TAB_1_ID:
                         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment1).commit();
                         return true;
-                    case R.id.tab2:
+                    case TAB_2_ID:
                         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment2).commit();
                         return true;
-                    case R.id.tab3:
+                    case TAB_3_ID:
                         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment3).commit();
                         return true;
                 }
